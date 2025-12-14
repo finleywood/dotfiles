@@ -6,6 +6,10 @@ for file in .[^.]* .??*; do
   # Skip if no matches
   [[ -e "$file" ]] || continue
 
+  # Ignore .git explicitly
+  [[ "$file" == ".git" ]] && continue
+
+
   target="$HOME/$file"
   source="$(pwd)/$file"
 
