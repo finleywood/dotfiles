@@ -3,6 +3,9 @@ export EDITOR='vim'
 
 autoload -U colors && colors
 
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
+
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -G'
